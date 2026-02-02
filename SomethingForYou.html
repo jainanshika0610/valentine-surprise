@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Something For You 💝</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div id="giftPanel">
+    <p id="msg1">Something for you 💖</p>
+    <p id="msg2">Choose your surprise 😏</p>
+
+    <div class="pandaButtons">
+
+      <!-- Gift One -->
+      <button class="giftBtn" onclick="goGiftOne()">
+        <img src="./images/gift1.png" class="pandaImg"><br>
+        <span>Gift One</span>
+      </button>
+
+      <!-- Gift Two -->
+      <button class="giftBtn" onclick="goGiftTwo()">
+        <img src="./images/gift2.png" class="pandaImg"><br>
+        <span>Gift Two</span>
+      </button>
+
+    </div>
+<br>
+<br>
+    <p id="msg3">Pick wisely… both are special 💕</p>
+  </div>
+    <button class="backBtn" onclick="goBack()">⬅ Back</button>
+
+</div>
+
+<script>
+function goGiftOne(){
+  window.location.href = "SecretNote.html";
+}
+
+function goGiftTwo(){
+  window.location.href = "OurMemories.html";
+}
+function goBack(){
+  window.location.href = "GoodChoice.html";
+}
+</script>
+
+</body>
+</html>

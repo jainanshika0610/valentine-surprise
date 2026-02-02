@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Memories 🎥</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.videoBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Each video card like a gift button */
+.videoCard {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background-color: #fff0f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Overlay text */
+.overlayText {
+  position: absolute;
+  color: #ff1493;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(255,255,255,0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.videoCard video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* Initially hidden */
+}
+
+.memoryMsg {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff69b4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.backBtn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<br><br>
+  <h2>Our Memories 🎬</h2>
+  <p>Click on a video to relive our special moments 💖</p>
+
+  <div class="videoBox">
+    <!-- Video 1 -->
+    <div class="videoCard" onclick="playVideo(1)">
+      <div class="overlayText">Our first movie date 🎬🍿</div>
+      <video id="video1" src="./videos/FirstMovieDate.mp4"></video>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="videoCard" onclick="playVideo(2)">
+      <div class="overlayText">My favorite memory ❤️</div>
+      <video id="video2" src="./videos/MyFavMemory.mp4"></video>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="videoCard" onclick="playVideo(3)">
+      <div class="overlayText">Second movie date 🎥</div>
+      <video id="video3" src="./videos/SecondMoveDate.mp4"></video>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="videoCard" onclick="playVideo(4)">
+      <div class="overlayText">Dal Makhni date 😋</div>
+      <video id="video4" src="./videos/DalMakhniDate.mp4"></video>
+    </div>
+
+    <!-- Video 5 -->
+    <div class="videoCard" onclick="playVideo(5)">
+      <div class="overlayText">Pasta date 🍝</div>
+      <video id="video5" src="./videos/PastaDate.mp4"></video>
+    </div>
+  </div>
+
+  <p id="memoryMsg" class="memoryMsg"></p>
+<p>Many memories loading... 💖</p>
+  <!-- Back Button -->
+  <button class="backBtn" onclick="goBack()">⬅ Back</button>
+
+</div>
+
+<script>
+function playVideo(videoNumber){
+  const video = document.getElementById("video"+videoNumber);
+  const overlay = video.previousElementSibling; // overlay div
+  overlay.style.display = "none"; // hide overlay text
+  video.style.display = "block";  // show video
+  video.play(); // start playing
+
+  const msg = document.getElementById("memoryMsg");
+  switch(videoNumber){
+    case 1:
+      msg.textContent = "Our first movie date 🎬🍿";
+      break;
+    case 2:
+      msg.textContent = "My favorite memory ❤️";
+      break;
+    case 3:
+      msg.textContent = "Second movie date 🎥";
+      break;
+    case 4:
+      msg.textContent = "Dal Makhni date 😋";
+      break;
+    case 5:
+      msg.textContent = "Pasta date 🍝";
+      break;
+    default:
+      msg.textContent = "Many memories loading... 💖";
+  }
+}
+
+function goBack(){
+  window.location.href = "SomethingForYou.html";
+}
+</script>
+
+</body>
+</html>

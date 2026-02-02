@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Surprise 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2 id="text" style="color: deeppink;
+    font-size: 30px;
+    font-family: monospace;">
+    
+    Will you be my Valentine? 💕
+  </h2>
+  <div class="btns">
+    <button id="yesBtn" onclick="yesClick()">YES ❤️</button>
+    <button id="noBtn">NO 🙈</button>
+  </div>
+
+<div id="afterYes" style="display:none;">
+  <p id="msg1">Good Choice Baby 😍</p>
+  <p id="msg2">You just unlocked unlimited hugs, kisses, and cuddles 💕</p>
+
+  <div class="pandaButtons">
+    <button id="pandaHugBtn" onclick="goNext()">
+  <img src="./images/panda.JPG" class="pandaImg">
+</button>
+
+<button id="pandaKissBtn" onclick="goNext()">
+  <img src="./images/pandaKiss.JPG" class="pandaImg">
+</button>
+  </div>
+  
+  
+  
+  <p id="msg3">Now You're stuck with me forever ∞</p>
+</div>
+<div id="changePanel" style="display:none;">
+  <p id="changeText">Wait… do you want to change your mind? 😏</p>
+
+  <div class="changeBox">
+    <button id="changeBtn">Actually… No</button>
+  </div>
+
+  <p id="tooLateMsg" style="display:none;">
+    <b>Too Late! 😤</b><br><br>
+    You already said YES, which means:<br><br>
+
+    ❌ No take-back allowed<br>
+    ❌ You're legally mine now (I checked) 😌<br>
+    ❌ Every “no” from now on = 10 extra kisses when we meet 💋<br><br>
+
+    You’re stuck with your girlfriend FOREVER 💖<br><br>
+    <b>Deal with it 😈</b>
+  </p>
+</div>
+
+  <div id="photoDiv" style="display:none;">
+    <img src="yourphoto.jpg" alt="Our Photo" class="finalPhoto">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  font-family: sans-serif;
+}
+
+.card {
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  width:350px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.btns {
+  margin-top:20px;
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+#noBtn {
+  background: #ddd;
+  position: relative;
+}
+
+#afterYes p {
+  margin: 10px 0;
+}
+
+#pandaBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pandaImg {
+  width: 120px;
+}
+
+.finalPhoto {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+.pandaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between buttons */
+  margin-top: 10px;
+}
+
+.pandaButtons button {
+  width: 140px;  /* fixed button size */
+  height: 140px;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.pandaButtons button:hover {
+  transform: scale(1.1); /* slight hover effect */
+}
+
+.pandaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* image fills button without stretching */
+  border-radius: 15px;
+}
+#changePanel {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px dashed deeppink;
+}
+
+.changeBox {
+  position: relative;
+  height: 60px;
+  margin-top: 10px;
+}
+
+#changeBtn {
+  position: absolute;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.topPhoto {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.envelopeImg {
+  width: 140px;
+}
+
+.handNote {
+  font-family: "Comic Sans MS", cursive;
+  background: #fff3f8;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.videoBox {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.videoBox video {
+  width: 48%;
+  border-radius: 10px;
+}
